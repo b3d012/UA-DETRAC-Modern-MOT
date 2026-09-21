@@ -1,0 +1,17 @@
+dataset:
+  name: UA-DETRAC
+  root_env: UA_DETRAC_ROOT
+  expected:
+    train_sequences: 60
+    test_sequences: 40
+  split_policy:
+    official_test_immutable: true
+    validation_source: official_train_only
+    split_unit: sequence
+  bbox_format_internal: xyxy
+  coordinate_policy: "Document conversion explicitly; never guess inclusive/exclusive pixel semantics."
+  allowed_vehicle_classes:
+    - car
+    - bus
+    - van
+    - others

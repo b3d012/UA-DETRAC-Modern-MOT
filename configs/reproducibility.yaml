@@ -1,0 +1,9 @@
+reproducibility:
+  seed: 42
+  deterministic: true
+  cudnn_benchmark: false
+  warn_only_deterministic_algorithms: true
+experiment:
+  id_format: "{timestamp}_{git_short_sha}_{config_hash}"
+  capture_git_state: true
+  capture_system_info: true
