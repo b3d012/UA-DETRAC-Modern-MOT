@@ -8,7 +8,7 @@ The project studies **why** detector outputs affect multi-object trackers differ
 
 ## Current status
 
-The repository is ready to begin **M1 — Benchmark Foundation**.
+**M1 — Benchmark Foundation** is implemented and pending acceptance review.
 
 Work is governed by:
 
@@ -76,6 +76,26 @@ M1 must:
 8. provide tests and a reproducible verification CLI.
 
 M1 explicitly does **not** create the 48/12 development split, build the canonical annotation schema, integrate TrackEval, or run detectors/trackers. Those belong to later milestones.
+
+### M1 commands
+
+Use Python 3.10–3.12 and install the project with its development dependencies:
+
+```bash
+python -m pip install -e '.[dev]'
+python scripts/verify_dataset.py --root "$UA_DETRAC_ROOT"
+python scripts/capture_environment.py
+```
+
+The verification command discovers frame counts, naming conventions, image dimensions, annotation
+matches, and top-level sequence metadata from the raw checkout. It does not hard-code observed image
+dimensions or parse frame targets. It writes a deterministic, machine-readable manifest to
+`data/manifests/ua_detrac_manifest.json`; all stored dataset paths are relative to the dataset root.
+
+To confirm determinism, run verification twice and compare the manifest's SHA-256 digest. The
+environment command writes a host-specific JSON snapshot under the ignored `outputs/environment/`
+directory. Re-verification treats identical manifest content as a no-op and refuses to overwrite a
+different existing manifest; protocol revisions must use a separately reviewed output path.
 
 See [`docs/ROADMAP.md`](docs/ROADMAP.md) for the complete acceptance gate and agent prompt.
 

@@ -6,8 +6,3 @@ experiment:
 
 dataset:
   config: configs/dataset/ua_detrac.yaml
-  validation:
-    fraction: 0.20
-    split_unit: sequence
-    stratification: null
-    note: "Choose/finalize a deterministic train/val strategy using official-train metadata only."

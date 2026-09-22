@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *.so
+*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -44,6 +45,8 @@ outputs/metrics/*
 !outputs/metrics/.gitkeep
 outputs/figures/*
 !outputs/figures/.gitkeep
+outputs/environment/*
+!outputs/environment/.gitkeep
 
 # Runtime-generated manifests/splits may be committed only after review
 # Keep generated temporary files ignored by default.

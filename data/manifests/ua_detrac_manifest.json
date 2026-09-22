@@ -1,0 +1,1723 @@
+{
+  "dataset": "UA-DETRAC",
+  "layout": {
+    "images": "DETRAC-Images",
+    "test_annotations": "DETRAC-Test-Annotations-XML",
+    "toolkit": "DETRAC-Toolkits",
+    "train_annotations": "DETRAC-Train-Annotations-XML"
+  },
+  "partitions": {
+    "test": [
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39031.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1470,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39031",
+        "last_frame": "img01470.jpg",
+        "name": "MVI_39031",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39051.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1120,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39051",
+        "last_frame": "img01120.jpg",
+        "name": "MVI_39051",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39211.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1660,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39211",
+        "last_frame": "img01660.jpg",
+        "name": "MVI_39211",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39271.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1570,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39271",
+        "last_frame": "img01570.jpg",
+        "name": "MVI_39271",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39311.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1505,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39311",
+        "last_frame": "img01505.jpg",
+        "name": "MVI_39311",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39361.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2030,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39361",
+        "last_frame": "img02030.jpg",
+        "name": "MVI_39361",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39371.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1390,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39371",
+        "last_frame": "img01390.jpg",
+        "name": "MVI_39371",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39401.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1385,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39401",
+        "last_frame": "img01385.jpg",
+        "name": "MVI_39401",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39501.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 540,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39501",
+        "last_frame": "img00540.jpg",
+        "name": "MVI_39501",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_39511.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 380,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39511",
+        "last_frame": "img00380.jpg",
+        "name": "MVI_39511",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40701.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1130,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40701",
+        "last_frame": "img01130.jpg",
+        "name": "MVI_40701",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40711.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1030,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40711",
+        "last_frame": "img01030.jpg",
+        "name": "MVI_40711",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40712.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2400,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40712",
+        "last_frame": "img02400.jpg",
+        "name": "MVI_40712",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40714.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1180,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40714",
+        "last_frame": "img01180.jpg",
+        "name": "MVI_40714",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40742.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1655,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40742",
+        "last_frame": "img01655.jpg",
+        "name": "MVI_40742",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40743.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1630,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40743",
+        "last_frame": "img01630.jpg",
+        "name": "MVI_40743",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40761.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2030,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40761",
+        "last_frame": "img02030.jpg",
+        "name": "MVI_40761",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40762.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1825,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40762",
+        "last_frame": "img01825.jpg",
+        "name": "MVI_40762",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40763.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1745,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40763",
+        "last_frame": "img01745.jpg",
+        "name": "MVI_40763",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40771.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1720,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40771",
+        "last_frame": "img01720.jpg",
+        "name": "MVI_40771",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40772.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1200,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40772",
+        "last_frame": "img01200.jpg",
+        "name": "MVI_40772",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40773.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 985,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40773",
+        "last_frame": "img00985.jpg",
+        "name": "MVI_40773",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40774.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 950,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40774",
+        "last_frame": "img00950.jpg",
+        "name": "MVI_40774",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40775.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 975,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40775",
+        "last_frame": "img00975.jpg",
+        "name": "MVI_40775",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40792.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1810,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40792",
+        "last_frame": "img01810.jpg",
+        "name": "MVI_40792",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40793.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1960,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40793",
+        "last_frame": "img01960.jpg",
+        "name": "MVI_40793",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40851.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1140,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40851",
+        "last_frame": "img01140.jpg",
+        "name": "MVI_40851",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40852.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1150,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40852",
+        "last_frame": "img01150.jpg",
+        "name": "MVI_40852",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40853.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1590,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40853",
+        "last_frame": "img01590.jpg",
+        "name": "MVI_40853",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40854.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1195,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40854",
+        "last_frame": "img01195.jpg",
+        "name": "MVI_40854",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40855.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1090,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40855",
+        "last_frame": "img01090.jpg",
+        "name": "MVI_40855",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40863.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1670,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40863",
+        "last_frame": "img01670.jpg",
+        "name": "MVI_40863",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40864.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1515,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40864",
+        "last_frame": "img01515.jpg",
+        "name": "MVI_40864",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40891.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1545,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40891",
+        "last_frame": "img01545.jpg",
+        "name": "MVI_40891",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40892.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1790,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40892",
+        "last_frame": "img01790.jpg",
+        "name": "MVI_40892",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40901.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1335,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40901",
+        "last_frame": "img01335.jpg",
+        "name": "MVI_40901",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40902.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1005,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40902",
+        "last_frame": "img01005.jpg",
+        "name": "MVI_40902",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40903.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1060,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40903",
+        "last_frame": "img01060.jpg",
+        "name": "MVI_40903",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40904.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1270,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40904",
+        "last_frame": "img01270.jpg",
+        "name": "MVI_40904",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Test-Annotations-XML/MVI_40905.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1710,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40905",
+        "last_frame": "img01710.jpg",
+        "name": "MVI_40905",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      }
+    ],
+    "train": [
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20011.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 664,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20011",
+        "last_frame": "img00664.jpg",
+        "name": "MVI_20011",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20012.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 936,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20012",
+        "last_frame": "img00936.jpg",
+        "name": "MVI_20012",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20032.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 437,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20032",
+        "last_frame": "img00437.jpg",
+        "name": "MVI_20032",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20033.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 784,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20033",
+        "last_frame": "img00784.jpg",
+        "name": "MVI_20033",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20034.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 800,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20034",
+        "last_frame": "img00800.jpg",
+        "name": "MVI_20034",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20035.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 800,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20035",
+        "last_frame": "img00800.jpg",
+        "name": "MVI_20035",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20051.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 906,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20051",
+        "last_frame": "img00906.jpg",
+        "name": "MVI_20051",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20052.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 694,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20052",
+        "last_frame": "img00694.jpg",
+        "name": "MVI_20052",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20061.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 800,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20061",
+        "last_frame": "img00800.jpg",
+        "name": "MVI_20061",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20062.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 800,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20062",
+        "last_frame": "img00800.jpg",
+        "name": "MVI_20062",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20063.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 800,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20063",
+        "last_frame": "img00800.jpg",
+        "name": "MVI_20063",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20064.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 800,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20064",
+        "last_frame": "img00800.jpg",
+        "name": "MVI_20064",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_20065.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1200,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_20065",
+        "last_frame": "img01200.jpg",
+        "name": "MVI_20065",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39761.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1660,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39761",
+        "last_frame": "img01660.jpg",
+        "name": "MVI_39761",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39771.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 570,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39771",
+        "last_frame": "img00570.jpg",
+        "name": "MVI_39771",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39781.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1865,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39781",
+        "last_frame": "img01865.jpg",
+        "name": "MVI_39781",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39801.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 885,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39801",
+        "last_frame": "img00885.jpg",
+        "name": "MVI_39801",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39811.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1070,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39811",
+        "last_frame": "img01070.jpg",
+        "name": "MVI_39811",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39821.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 880,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39821",
+        "last_frame": "img00880.jpg",
+        "name": "MVI_39821",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39851.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1420,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39851",
+        "last_frame": "img01420.jpg",
+        "name": "MVI_39851",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39861.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 745,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39861",
+        "last_frame": "img00745.jpg",
+        "name": "MVI_39861",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_39931.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1270,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_39931",
+        "last_frame": "img01270.jpg",
+        "name": "MVI_39931",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40131.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1645,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40131",
+        "last_frame": "img01645.jpg",
+        "name": "MVI_40131",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40141.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1600,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40141",
+        "last_frame": "img01600.jpg",
+        "name": "MVI_40141",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40152.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1750,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40152",
+        "last_frame": "img01750.jpg",
+        "name": "MVI_40152",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40161.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1490,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40161",
+        "last_frame": "img01490.jpg",
+        "name": "MVI_40161",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40162.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1765,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40162",
+        "last_frame": "img01765.jpg",
+        "name": "MVI_40162",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40171.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1150,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40171",
+        "last_frame": "img01150.jpg",
+        "name": "MVI_40171",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40172.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2635,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40172",
+        "last_frame": "img02635.jpg",
+        "name": "MVI_40172",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40181.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1700,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40181",
+        "last_frame": "img01700.jpg",
+        "name": "MVI_40181",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40191.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2495,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40191",
+        "last_frame": "img02495.jpg",
+        "name": "MVI_40191",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40192.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2195,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40192",
+        "last_frame": "img02195.jpg",
+        "name": "MVI_40192",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40201.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 925,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40201",
+        "last_frame": "img00925.jpg",
+        "name": "MVI_40201",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40204.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1225,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40204",
+        "last_frame": "img01225.jpg",
+        "name": "MVI_40204",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40211.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1950,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40211",
+        "last_frame": "img01950.jpg",
+        "name": "MVI_40211",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40212.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1690,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40212",
+        "last_frame": "img01690.jpg",
+        "name": "MVI_40212",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40213.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1790,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40213",
+        "last_frame": "img01790.jpg",
+        "name": "MVI_40213",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40241.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2320,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40241",
+        "last_frame": "img02320.jpg",
+        "name": "MVI_40241",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40243.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1265,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40243",
+        "last_frame": "img01265.jpg",
+        "name": "MVI_40243",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40244.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1345,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40244",
+        "last_frame": "img01345.jpg",
+        "name": "MVI_40244",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "cloudy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40732.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2120,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40732",
+        "last_frame": "img02120.jpg",
+        "name": "MVI_40732",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40751.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1145,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40751",
+        "last_frame": "img01145.jpg",
+        "name": "MVI_40751",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40752.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2025,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40752",
+        "last_frame": "img02025.jpg",
+        "name": "MVI_40752",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40871.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1720,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40871",
+        "last_frame": "img01720.jpg",
+        "name": "MVI_40871",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40962.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1875,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40962",
+        "last_frame": "img01875.jpg",
+        "name": "MVI_40962",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40963.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1820,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40963",
+        "last_frame": "img01820.jpg",
+        "name": "MVI_40963",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40981.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1995,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40981",
+        "last_frame": "img01995.jpg",
+        "name": "MVI_40981",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40991.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1820,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40991",
+        "last_frame": "img01820.jpg",
+        "name": "MVI_40991",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_40992.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2160,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_40992",
+        "last_frame": "img02160.jpg",
+        "name": "MVI_40992",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "night"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_41063.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1505,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_41063",
+        "last_frame": "img01505.jpg",
+        "name": "MVI_41063",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_41073.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1825,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_41073",
+        "last_frame": "img01825.jpg",
+        "name": "MVI_41073",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "sunny"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63521.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 2055,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63521",
+        "last_frame": "img02055.jpg",
+        "name": "MVI_63521",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63525.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 985,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63525",
+        "last_frame": "img00985.jpg",
+        "name": "MVI_63525",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63544.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1160,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63544",
+        "last_frame": "img01160.jpg",
+        "name": "MVI_63544",
+        "sequence_attributes": {
+          "camera_state": "stable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63552.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1150,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63552",
+        "last_frame": "img01150.jpg",
+        "name": "MVI_63552",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63553.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1405,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63553",
+        "last_frame": "img01405.jpg",
+        "name": "MVI_63553",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63554.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1445,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63554",
+        "last_frame": "img01445.jpg",
+        "name": "MVI_63554",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63561.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1285,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63561",
+        "last_frame": "img01285.jpg",
+        "name": "MVI_63561",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63562.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1185,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63562",
+        "last_frame": "img01185.jpg",
+        "name": "MVI_63562",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      },
+      {
+        "annotation_file": "DETRAC-Train-Annotations-XML/MVI_63563.xml",
+        "first_frame": "img00001.jpg",
+        "frame_count": 1390,
+        "frame_naming_pattern": "img{frame:05d}.jpg",
+        "image_dimensions": {
+          "height": 540,
+          "width": 960
+        },
+        "image_directory": "DETRAC-Images/MVI_63563",
+        "last_frame": "img01390.jpg",
+        "name": "MVI_63563",
+        "sequence_attributes": {
+          "camera_state": "unstable",
+          "sence_weather": "rainy"
+        }
+      }
+    ]
+  },
+  "schema_version": 1,
+  "summary": {
+    "sequences_with_missing_frames": 0,
+    "sequences_without_annotations": 0,
+    "test_sequences": 40,
+    "total_sequences": 100,
+    "train_sequences": 60
+  }
+}
