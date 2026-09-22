@@ -16,6 +16,8 @@ venv/
 Thumbs.db
 
 # UA-DETRAC raw data: NEVER commit dataset archives, frames, or annotations
+# Recommended local checkout location:
+/data/ua_detrac/
 /data/raw/
 /data/external/
 /data/UA-DETRAC/
