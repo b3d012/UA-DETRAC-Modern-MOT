@@ -1,78 +1,103 @@
-# UA-DETRAC Modern MOT
+# Beyond mAP — UA-DETRAC Detector–Tracker Compatibility Study
 
-A reproducible research codebase for benchmarking modern object detectors and multi-object trackers on **UA-DETRAC** while preserving the official benchmark protocol.
+A reproducible research codebase for the thesis project:
 
-## Milestone status
+> **Beyond mAP: Explaining Detector–Tracker Compatibility in Multi-Object Vehicle Tracking — A Protocol-Faithful Factorial and Detector-Error Study on UA-DETRAC**
 
-This repository is currently at **M1 — Benchmark Foundation**. M1 is infrastructure only: dataset acquisition/verification, parsing, visualization, validation, split discipline, environment capture, and reproducibility. **No model comparison claims or test-set tuning belong in M1.**
+The project studies **why** detector outputs affect multi-object trackers differently. The modern detector × tracker benchmark is the empirical foundation; the main explanatory contribution is the analysis of temporal detector-error structure and controlled perturbations.
+
+## Current status
+
+The repository is ready to begin **M1 — Benchmark Foundation**.
+
+Work is governed by:
+
+- [`AGENTS.md`](AGENTS.md) — permanent rules for coding/research agents.
+- [`docs/ROADMAP.md`](docs/ROADMAP.md) — cumulative M1–M14 implementation plan.
+- [`docs/DATASET_POLICY.md`](docs/DATASET_POLICY.md) — split/test-set discipline.
+- [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) — experiment metadata requirements.
+
+Do not begin M2 until M1 passes its acceptance gate and is reviewed/tagged.
+
+## Research questions
+
+The study is designed around questions such as:
+
+1. How large are detector, tracker, and detector × tracker interaction effects under a controlled modern UA-DETRAC benchmark?
+2. Do temporal detector-error features explain association performance beyond conventional frame-wise metrics such as AP/recall?
+3. At matched aggregate detection quality, do burst misses, persistent false positives, localization jitter, and score volatility affect trackers differently?
+4. How do these effects vary with UA-DETRAC conditions and computational constraints?
 
 ## Benchmark rules
 
 - Preserve the official **60-sequence training / 40-sequence testing** partition.
-- The official test set is treated as **immutable evaluation-only data**.
-- Any validation split must be derived **only from the 60 official training sequences**, at sequence level.
-- Never choose hyperparameters, thresholds, detector settings, tracker settings, or model checkpoints using the official test set.
-- Raw UA-DETRAC files live outside Git and are addressed through configuration/environment variables.
-
-## Repository layout
-
-```text
-UA-DETRAC-Modern-MOT/
-├── .github/
-├── configs/
-│   ├── dataset/
-│   └── experiments/
-├── data/
-│   ├── manifests/
-│   └── splits/
-├── docs/
-├── experiments/
-├── src/
-│   ├── datasets/
-│   ├── detectors/
-│   ├── trackers/
-│   ├── evaluation/
-│   └── analysis/
-├── outputs/
-│   ├── detections/
-│   ├── tracks/
-│   ├── metrics/
-│   └── figures/
-├── scripts/
-├── tests/
-├── pyproject.toml
-└── README.md
-```
+- Treat the official 40 test sequences as immutable evaluation-only data.
+- Derive validation only from the official 60 training sequences and only at sequence level.
+- Never choose checkpoints, thresholds, detector settings, tracker settings, Re-ID settings, or ablations using official-test performance.
+- Keep raw UA-DETRAC data out of Git.
+- Generate all final tables/figures from reproducible result files rather than editing results manually.
 
 ## Local dataset convention
 
-Set an environment variable pointing at the extracted dataset root:
+The recommended local layout is:
 
-```bash
-export UA_DETRAC_ROOT=/absolute/path/to/UA-DETRAC
+```text
+data/
+└── ua_detrac/
+    ├── DETRAC-Images/
+    ├── DETRAC-Train-Annotations-XML/
+    ├── DETRAC-Test-Annotations-XML/
+    └── DETRAC-toolkit/   # exact downloaded name may vary
 ```
 
-Do **not** place raw images/annotations in Git. The eventual M1 setup script should support either the official layout directly or a small number of clearly documented legacy layouts without silently moving files.
+The entire `data/ua_detrac/` directory is ignored by Git.
 
-## M1 acceptance criteria
+Set:
 
-M1 is complete only when the project can:
+```bash
+export UA_DETRAC_ROOT=/absolute/path/to/UA-DETRAC-Modern-MOT/data/ua_detrac
+```
 
-1. verify the downloaded UA-DETRAC assets and expected official train/test sequence counts;
-2. parse official annotations and sequence-level attributes into a normalized internal representation;
-3. validate frame continuity, image dimensions, annotation ranges, class names, track IDs, and bounding-box semantics;
-4. visualize frames with GT boxes, track IDs, ignored regions, and relevant attributes;
-5. generate a deterministic sequence-level train/validation split from the official 60 training sequences while leaving all 40 test sequences untouched;
-6. write a dataset manifest with sequence names, frame counts, resolution, classes, annotation statistics, and checksums where practical;
-7. capture CPU, GPU, CUDA, Python, PyTorch, package versions, Git commit, config hash, seed, and experiment ID;
-8. run automated tests and validation commands without relying on the test set for tuning.
+Code must also support an explicit CLI/config override and must never silently move raw files.
 
-See [`docs/M1_BENCHMARK_FOUNDATION.md`](docs/M1_BENCHMARK_FOUNDATION.md) and [`docs/DATASET_POLICY.md`](docs/DATASET_POLICY.md).
+## M1 — Benchmark Foundation
+
+M1 is intentionally narrow. It verifies the dataset and environment before annotation conversion, data splitting, evaluation, or model integration.
+
+M1 must:
+
+1. resolve `UA_DETRAC_ROOT` or an explicit dataset-root override;
+2. identify the existing raw layout without moving files;
+3. recognize exactly 60 official training and 40 official testing sequences;
+4. match sequence folders to annotation sources;
+5. build a deterministic dataset manifest;
+6. capture reproducibility/environment metadata;
+7. verify raw dataset content is ignored by Git;
+8. provide tests and a reproducible verification CLI.
+
+M1 explicitly does **not** create the 48/12 development split, build the canonical annotation schema, integrate TrackEval, or run detectors/trackers. Those belong to later milestones.
+
+See [`docs/ROADMAP.md`](docs/ROADMAP.md) for the complete acceptance gate and agent prompt.
+
+## Milestone workflow
+
+For every milestone:
+
+```text
+implement
+→ audit
+→ fix
+→ acceptance gate
+→ commit/tag
+→ next milestone
+```
+
+Suggested accepted tags begin with `m1-foundation`, `m2-annotations`, `m3-split-lock`, `m4-evaluation`, and continue according to the roadmap.
 
 ## Reproducibility
 
-The default seed/configuration lives in `configs/reproducibility.yaml`. A machine-specific dependency lock should be generated during M1 after the Python/PyTorch/CUDA environment is selected, rather than committing an arbitrary CUDA-specific PyTorch wheel choice before the target machine is known.
+The default seed/configuration lives in `configs/reproducibility.yaml`. Every substantive experiment should record the Git state, config hash, seed, software/hardware environment, and command used to produce it.
 
 ## Citation
 
-If you use UA-DETRAC, cite the official UA-DETRAC publication and follow the dataset's own usage/license terms. This repository does not redistribute UA-DETRAC data.
+UA-DETRAC data are not redistributed by this repository. Users of the benchmark should cite the official UA-DETRAC publication and follow the dataset's own usage/license terms.
