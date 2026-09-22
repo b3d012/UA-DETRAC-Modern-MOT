@@ -1,0 +1,729 @@
+{
+  "algorithm": {
+    "name": "m3_annotation_aware_lexicographic",
+    "seed": 42
+  },
+  "annotation_coverage_fingerprint": "8e59f3e548028b37a6145771b6950f1b9dba6b655de04c98bf7d2240e0af28fe",
+  "audit": {
+    "annotated_frame_exposure": {
+      "achieved_proportion": 0.22001583724188342,
+      "percentage_point_deviation": 2.001583724188341,
+      "source_total": 82085,
+      "target_proportion": 0.2,
+      "validation_total": 18060
+    },
+    "camera_state": {
+      "stable": {
+        "achieved_proportion": 0.3333333333333333,
+        "percentage_point_deviation": -3.3333333333333326,
+        "source_count": 22,
+        "target_proportion": 0.36666666666666664,
+        "validation_count": 4
+      },
+      "unstable": {
+        "achieved_proportion": 0.6666666666666666,
+        "percentage_point_deviation": 3.3333333333333326,
+        "source_count": 38,
+        "target_proportion": 0.6333333333333333,
+        "validation_count": 8
+      }
+    },
+    "frame_summaries": {
+      "official_train": {
+        "annotated_frames": {
+          "count": 60,
+          "maximum": 2635,
+          "mean": 1368.0833333333333,
+          "median": 1304.5,
+          "minimum": 437
+        },
+        "raw_image_frames": {
+          "count": 60,
+          "maximum": 2635,
+          "mean": 1396.5166666666667,
+          "median": 1367.5,
+          "minimum": 437
+        }
+      },
+      "validation": {
+        "annotated_frames": {
+          "count": 12,
+          "maximum": 2635,
+          "mean": 1505.0,
+          "median": 1408.5,
+          "minimum": 437
+        },
+        "raw_image_frames": {
+          "count": 12,
+          "maximum": 2635,
+          "mean": 1537.9166666666667,
+          "median": 1490.0,
+          "minimum": 437
+        }
+      }
+    },
+    "intersections": {
+      "development_official_test": [],
+      "development_validation": [],
+      "validation_official_test": []
+    },
+    "joint_strata": {
+      "cloudy|stable": {
+        "achieved_proportion": 0.08333333333333333,
+        "percentage_point_deviation": -3.333333333333334,
+        "source_count": 7,
+        "target_proportion": 0.11666666666666667,
+        "validation_count": 1,
+        "zero_validation_sequences": false
+      },
+      "cloudy|unstable": {
+        "achieved_proportion": 0.25,
+        "percentage_point_deviation": 4.999999999999999,
+        "source_count": 12,
+        "target_proportion": 0.2,
+        "validation_count": 3,
+        "zero_validation_sequences": false
+      },
+      "night|stable": {
+        "achieved_proportion": 0.16666666666666666,
+        "percentage_point_deviation": 0.0,
+        "source_count": 10,
+        "target_proportion": 0.16666666666666666,
+        "validation_count": 2,
+        "zero_validation_sequences": false
+      },
+      "night|unstable": {
+        "achieved_proportion": 0.08333333333333333,
+        "percentage_point_deviation": -1.6666666666666676,
+        "source_count": 6,
+        "target_proportion": 0.1,
+        "validation_count": 1,
+        "zero_validation_sequences": false
+      },
+      "rainy|stable": {
+        "achieved_proportion": 0.08333333333333333,
+        "percentage_point_deviation": 3.3333333333333326,
+        "source_count": 3,
+        "target_proportion": 0.05,
+        "validation_count": 1,
+        "zero_validation_sequences": false
+      },
+      "rainy|unstable": {
+        "achieved_proportion": 0.08333333333333333,
+        "percentage_point_deviation": -3.333333333333334,
+        "source_count": 7,
+        "target_proportion": 0.11666666666666667,
+        "validation_count": 1,
+        "zero_validation_sequences": false
+      },
+      "sunny|stable": {
+        "achieved_proportion": 0.0,
+        "percentage_point_deviation": -3.3333333333333335,
+        "source_count": 2,
+        "target_proportion": 0.03333333333333333,
+        "validation_count": 0,
+        "zero_validation_sequences": true
+      },
+      "sunny|unstable": {
+        "achieved_proportion": 0.25,
+        "percentage_point_deviation": 3.3333333333333326,
+        "source_count": 13,
+        "target_proportion": 0.21666666666666667,
+        "validation_count": 3,
+        "zero_validation_sequences": false
+      }
+    },
+    "raw_image_frame_exposure": {
+      "achieved_proportion": 0.22025038488620496,
+      "percentage_point_deviation": 2.0250384886204955,
+      "source_total": 83791,
+      "target_proportion": 0.2,
+      "validation_total": 18455
+    },
+    "role_counts": {
+      "development_train": 48,
+      "official_test": 40,
+      "validation": 12
+    },
+    "weather": {
+      "cloudy": {
+        "achieved_proportion": 0.3333333333333333,
+        "percentage_point_deviation": 1.6666666666666663,
+        "source_count": 19,
+        "target_proportion": 0.31666666666666665,
+        "validation_count": 4
+      },
+      "night": {
+        "achieved_proportion": 0.25,
+        "percentage_point_deviation": -1.6666666666666663,
+        "source_count": 16,
+        "target_proportion": 0.26666666666666666,
+        "validation_count": 3
+      },
+      "rainy": {
+        "achieved_proportion": 0.16666666666666666,
+        "percentage_point_deviation": 0.0,
+        "source_count": 10,
+        "target_proportion": 0.16666666666666666,
+        "validation_count": 2
+      },
+      "sunny": {
+        "achieved_proportion": 0.25,
+        "percentage_point_deviation": 0.0,
+        "source_count": 15,
+        "target_proportion": 0.25,
+        "validation_count": 3
+      }
+    }
+  },
+  "roles": {
+    "development_train": [
+      {
+        "annotated_frame_count": 936,
+        "camera_state": "unstable",
+        "frame_count": 936,
+        "name": "MVI_20012",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 784,
+        "camera_state": "unstable",
+        "frame_count": 784,
+        "name": "MVI_20033",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 800,
+        "camera_state": "unstable",
+        "frame_count": 800,
+        "name": "MVI_20034",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 800,
+        "camera_state": "unstable",
+        "frame_count": 800,
+        "name": "MVI_20035",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 906,
+        "camera_state": "unstable",
+        "frame_count": 906,
+        "name": "MVI_20051",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 800,
+        "camera_state": "unstable",
+        "frame_count": 800,
+        "name": "MVI_20061",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 800,
+        "camera_state": "unstable",
+        "frame_count": 800,
+        "name": "MVI_20062",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 800,
+        "camera_state": "unstable",
+        "frame_count": 800,
+        "name": "MVI_20063",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 800,
+        "camera_state": "unstable",
+        "frame_count": 800,
+        "name": "MVI_20064",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 1200,
+        "camera_state": "unstable",
+        "frame_count": 1200,
+        "name": "MVI_20065",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 1323,
+        "camera_state": "stable",
+        "frame_count": 1660,
+        "name": "MVI_39761",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 570,
+        "camera_state": "stable",
+        "frame_count": 570,
+        "name": "MVI_39771",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1861,
+        "camera_state": "stable",
+        "frame_count": 1865,
+        "name": "MVI_39781",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 885,
+        "camera_state": "unstable",
+        "frame_count": 885,
+        "name": "MVI_39801",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 500,
+        "camera_state": "unstable",
+        "frame_count": 1070,
+        "name": "MVI_39811",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 880,
+        "camera_state": "unstable",
+        "frame_count": 880,
+        "name": "MVI_39821",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1286,
+        "camera_state": "unstable",
+        "frame_count": 1420,
+        "name": "MVI_39851",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 745,
+        "camera_state": "unstable",
+        "frame_count": 745,
+        "name": "MVI_39861",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1082,
+        "camera_state": "unstable",
+        "frame_count": 1270,
+        "name": "MVI_39931",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1645,
+        "camera_state": "unstable",
+        "frame_count": 1645,
+        "name": "MVI_40131",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1600,
+        "camera_state": "stable",
+        "frame_count": 1600,
+        "name": "MVI_40141",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1746,
+        "camera_state": "unstable",
+        "frame_count": 1750,
+        "name": "MVI_40152",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1490,
+        "camera_state": "unstable",
+        "frame_count": 1490,
+        "name": "MVI_40161",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1726,
+        "camera_state": "unstable",
+        "frame_count": 1765,
+        "name": "MVI_40162",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1150,
+        "camera_state": "unstable",
+        "frame_count": 1150,
+        "name": "MVI_40171",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1700,
+        "camera_state": "stable",
+        "frame_count": 1700,
+        "name": "MVI_40181",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1225,
+        "camera_state": "stable",
+        "frame_count": 1225,
+        "name": "MVI_40204",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1923,
+        "camera_state": "unstable",
+        "frame_count": 1950,
+        "name": "MVI_40211",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1690,
+        "camera_state": "unstable",
+        "frame_count": 1690,
+        "name": "MVI_40212",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1782,
+        "camera_state": "unstable",
+        "frame_count": 1790,
+        "name": "MVI_40213",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 2320,
+        "camera_state": "stable",
+        "frame_count": 2320,
+        "name": "MVI_40241",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1265,
+        "camera_state": "stable",
+        "frame_count": 1265,
+        "name": "MVI_40243",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1345,
+        "camera_state": "stable",
+        "frame_count": 1345,
+        "name": "MVI_40244",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 1145,
+        "camera_state": "stable",
+        "frame_count": 1145,
+        "name": "MVI_40751",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 2025,
+        "camera_state": "stable",
+        "frame_count": 2025,
+        "name": "MVI_40752",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1720,
+        "camera_state": "unstable",
+        "frame_count": 1720,
+        "name": "MVI_40871",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 1875,
+        "camera_state": "stable",
+        "frame_count": 1875,
+        "name": "MVI_40962",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1820,
+        "camera_state": "stable",
+        "frame_count": 1820,
+        "name": "MVI_40963",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1995,
+        "camera_state": "stable",
+        "frame_count": 1995,
+        "name": "MVI_40981",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1505,
+        "camera_state": "stable",
+        "frame_count": 1505,
+        "name": "MVI_41063",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 1825,
+        "camera_state": "stable",
+        "frame_count": 1825,
+        "name": "MVI_41073",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 2055,
+        "camera_state": "stable",
+        "frame_count": 2055,
+        "name": "MVI_63521",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 985,
+        "camera_state": "stable",
+        "frame_count": 985,
+        "name": "MVI_63525",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 1405,
+        "camera_state": "unstable",
+        "frame_count": 1405,
+        "name": "MVI_63553",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 1445,
+        "camera_state": "unstable",
+        "frame_count": 1445,
+        "name": "MVI_63554",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 1285,
+        "camera_state": "unstable",
+        "frame_count": 1285,
+        "name": "MVI_63561",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 1185,
+        "camera_state": "unstable",
+        "frame_count": 1185,
+        "name": "MVI_63562",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 1390,
+        "camera_state": "unstable",
+        "frame_count": 1390,
+        "name": "MVI_63563",
+        "sence_weather": "rainy"
+      }
+    ],
+    "official_test": [
+      {
+        "name": "MVI_39031"
+      },
+      {
+        "name": "MVI_39051"
+      },
+      {
+        "name": "MVI_39211"
+      },
+      {
+        "name": "MVI_39271"
+      },
+      {
+        "name": "MVI_39311"
+      },
+      {
+        "name": "MVI_39361"
+      },
+      {
+        "name": "MVI_39371"
+      },
+      {
+        "name": "MVI_39401"
+      },
+      {
+        "name": "MVI_39501"
+      },
+      {
+        "name": "MVI_39511"
+      },
+      {
+        "name": "MVI_40701"
+      },
+      {
+        "name": "MVI_40711"
+      },
+      {
+        "name": "MVI_40712"
+      },
+      {
+        "name": "MVI_40714"
+      },
+      {
+        "name": "MVI_40742"
+      },
+      {
+        "name": "MVI_40743"
+      },
+      {
+        "name": "MVI_40761"
+      },
+      {
+        "name": "MVI_40762"
+      },
+      {
+        "name": "MVI_40763"
+      },
+      {
+        "name": "MVI_40771"
+      },
+      {
+        "name": "MVI_40772"
+      },
+      {
+        "name": "MVI_40773"
+      },
+      {
+        "name": "MVI_40774"
+      },
+      {
+        "name": "MVI_40775"
+      },
+      {
+        "name": "MVI_40792"
+      },
+      {
+        "name": "MVI_40793"
+      },
+      {
+        "name": "MVI_40851"
+      },
+      {
+        "name": "MVI_40852"
+      },
+      {
+        "name": "MVI_40853"
+      },
+      {
+        "name": "MVI_40854"
+      },
+      {
+        "name": "MVI_40855"
+      },
+      {
+        "name": "MVI_40863"
+      },
+      {
+        "name": "MVI_40864"
+      },
+      {
+        "name": "MVI_40891"
+      },
+      {
+        "name": "MVI_40892"
+      },
+      {
+        "name": "MVI_40901"
+      },
+      {
+        "name": "MVI_40902"
+      },
+      {
+        "name": "MVI_40903"
+      },
+      {
+        "name": "MVI_40904"
+      },
+      {
+        "name": "MVI_40905"
+      }
+    ],
+    "validation": [
+      {
+        "annotated_frame_count": 664,
+        "camera_state": "unstable",
+        "frame_count": 664,
+        "name": "MVI_20011",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 437,
+        "camera_state": "unstable",
+        "frame_count": 437,
+        "name": "MVI_20032",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 694,
+        "camera_state": "unstable",
+        "frame_count": 694,
+        "name": "MVI_20052",
+        "sence_weather": "sunny"
+      },
+      {
+        "annotated_frame_count": 2635,
+        "camera_state": "unstable",
+        "frame_count": 2635,
+        "name": "MVI_40172",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 2495,
+        "camera_state": "unstable",
+        "frame_count": 2495,
+        "name": "MVI_40191",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 2195,
+        "camera_state": "unstable",
+        "frame_count": 2195,
+        "name": "MVI_40192",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 925,
+        "camera_state": "stable",
+        "frame_count": 925,
+        "name": "MVI_40201",
+        "sence_weather": "cloudy"
+      },
+      {
+        "annotated_frame_count": 2120,
+        "camera_state": "stable",
+        "frame_count": 2120,
+        "name": "MVI_40732",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 1667,
+        "camera_state": "unstable",
+        "frame_count": 1820,
+        "name": "MVI_40991",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 2122,
+        "camera_state": "stable",
+        "frame_count": 2160,
+        "name": "MVI_40992",
+        "sence_weather": "night"
+      },
+      {
+        "annotated_frame_count": 956,
+        "camera_state": "stable",
+        "frame_count": 1160,
+        "name": "MVI_63544",
+        "sence_weather": "rainy"
+      },
+      {
+        "annotated_frame_count": 1150,
+        "camera_state": "unstable",
+        "frame_count": 1150,
+        "name": "MVI_63552",
+        "sence_weather": "rainy"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "source_manifest_sha256": "a456a2b2260d5994795c05b9c4985c74e511a04b1f98251a5d6037eb4eba49b7"
+}
