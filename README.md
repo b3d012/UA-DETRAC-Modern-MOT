@@ -8,7 +8,8 @@ The project studies **why** detector outputs affect multi-object trackers differ
 
 ## Current status
 
-**M1 — Benchmark Foundation** is implemented and pending acceptance review.
+**M1 — Benchmark Foundation** is accepted and tagged `m1-foundation`.
+**M2 — Annotation and Visualization Layer** is the current implementation milestone.
 
 Work is governed by:
 
@@ -17,7 +18,7 @@ Work is governed by:
 - [`docs/DATASET_POLICY.md`](docs/DATASET_POLICY.md) — split/test-set discipline.
 - [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) — experiment metadata requirements.
 
-Do not begin M2 until M1 passes its acceptance gate and is reviewed/tagged.
+M2 must preserve the accepted M1 foundation and its frozen artifacts.
 
 ## Research questions
 
