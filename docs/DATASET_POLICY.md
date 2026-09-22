@@ -6,15 +6,37 @@ UA-DETRAC's official training and testing partitions are benchmark assets, not s
 
 - Official train: 60 sequences.
 - Official test: 40 sequences.
-- The official test set must remain evaluation-only.
-- Validation is carved out exclusively from the 60 training sequences.
-- Splitting is performed at **sequence level**, never by individual frame, to avoid temporal leakage.
-- No threshold selection, ablation choice, checkpoint selection, early stopping decision, detector confidence setting, NMS setting, association threshold, or tracker hyperparameter may be selected using official-test performance.
+- The official test set remains evaluation-only.
+- Validation is derived exclusively from the 60 official training sequences.
+- Splitting is performed at **sequence level**, never frame level, to avoid temporal leakage.
+- No checkpoint, threshold, early-stopping decision, detector confidence/NMS setting, tracker association setting, Re-ID choice, ablation, or model-selection decision may be selected using official-test performance.
 
 ## Raw data
 
-Raw frames and annotations are never committed to Git. Store them outside the repository and reference them with `UA_DETRAC_ROOT` or an equivalent explicit config override.
+Raw frames, annotations, archives, and toolkit files are never committed to Git.
 
-## Test-set access logging
+For this repository, the recommended local location is `data/ua_detrac/`. That directory is ignored in `.gitignore`.
 
-M1 should make test-set evaluation an explicit command and record each test evaluation under an experiment ID. Exploratory scripts should default to train/validation data and require a deliberate flag to read official-test labels.
+Project code must reference the dataset through `UA_DETRAC_ROOT` or an explicit config/CLI override. Raw files are immutable inputs: scripts must not silently rename, reorganize, overwrite, or normalize them in place.
+
+## Milestone ownership
+
+- **M1** verifies the raw layout and sequence counts.
+- **M2** creates the canonical annotation representation.
+- **M3** creates and freezes the 48/12 development-train/validation split from the official 60 training sequences.
+- **M9** freezes detector–tracker tuning configurations.
+- **M10** performs the primary official-test factorial evaluation.
+
+Earlier milestones must not pre-empt the responsibilities of later milestones.
+
+## Test-set access
+
+Exploratory/tuning workflows should default to development-train/validation data. Once M3 exists, code paths marked as tuning must reject official-test sequences.
+
+Official-test evaluation must be deliberate and reproducible. From M10 onward, every official-test run should be associated with an experiment/config identity so the final result set is auditable.
+
+## Derived artifacts
+
+Generated manifests, split files, cached detections, tracker outputs, metrics, and figures are not raw dataset files. They are governed by the milestone that creates them.
+
+Once an artifact is explicitly frozen by an accepted milestone, later code must treat it as immutable unless a documented protocol revision is approved.
