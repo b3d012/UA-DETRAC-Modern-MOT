@@ -36,6 +36,30 @@ def test_verify_git_safety_accepts_ignored_untracked_raw_data(tmp_path: Path) ->
     verification.verify_git_safety(repo, raw)
 
 
+def test_verify_git_safety_accepts_absent_ignored_raw_data_directory(tmp_path: Path) -> None:
+    verification = _verification_module()
+    repo = tmp_path / "repo"
+    raw = repo / "data" / "ua_detrac"
+    repo.mkdir()
+    (repo / ".gitignore").write_text("/data/ua_detrac/\n", encoding="utf-8")
+    _git(repo, "init")
+
+    verification.verify_git_safety(repo, raw)
+    assert not raw.exists()
+
+
+def test_verify_git_safety_rejects_absent_non_ignored_raw_data_directory(tmp_path: Path) -> None:
+    verification = _verification_module()
+    repo = tmp_path / "repo"
+    raw = repo / "data" / "ua_detrac"
+    repo.mkdir()
+    (repo / ".gitignore").write_text("", encoding="utf-8")
+    _git(repo, "init")
+
+    with pytest.raises(verification.GitSafetyError, match="not ignored"):
+        verification.verify_git_safety(repo, raw)
+
+
 def test_verify_git_safety_rejects_force_added_raw_data(tmp_path: Path) -> None:
     verification = _verification_module()
     repo = tmp_path / "repo"

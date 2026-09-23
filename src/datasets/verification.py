@@ -31,7 +31,9 @@ def verify_git_safety(repo_root: str | Path, dataset_root: str | Path) -> None:
 
     for target in targets:
         relative = target.relative_to(repo).as_posix()
-        ignored = _git(repo, "check-ignore", "--quiet", "--no-index", "--", relative)
+        ignore_target = target if target.exists() else target / ".git-safety-probe"
+        ignore_relative = ignore_target.relative_to(repo).as_posix()
+        ignored = _git(repo, "check-ignore", "--quiet", "--no-index", "--", ignore_relative)
         if ignored.returncode != 0:
             raise GitSafetyError(f"Raw dataset path is not ignored by Git: {relative}")
         tracked = _git(repo, "ls-files", "--cached", "--", relative)
