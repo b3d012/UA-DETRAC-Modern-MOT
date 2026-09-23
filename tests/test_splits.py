@@ -45,16 +45,35 @@ def test_optimizer_prefers_annotated_coverage_before_raw_frame_balance() -> None
     assert select_validation_sequences(candidates, validation_count=1, seed=42) == ("B",)
 
 
-def test_split_audit_reports_target_achieved_and_zero_joint_stratum(monkeypatch, tmp_path: Path) -> None:
+def test_split_audit_reports_target_achieved_and_zero_joint_stratum(
+    monkeypatch, tmp_path: Path
+) -> None:
     candidates = tuple(
-        SequenceSplitCandidate(f"TRAIN_{index:03d}", "sunny" if index < 38 else "rainy", "stable" if index % 2 == 0 else "unstable", 1, 1)
+        SequenceSplitCandidate(
+            f"TRAIN_{index:03d}",
+            "sunny" if index < 38 else "rainy",
+            "stable" if index % 2 == 0 else "unstable",
+            1,
+            1,
+        )
         for index in range(60)
     )
     from datasets import splits
 
-    monkeypatch.setattr(splits, "derive_training_candidates", lambda _manifest, _root: (candidates, "coverage"))
-    monkeypatch.setattr(splits, "select_validation_sequences", lambda _candidates, **_kwargs: tuple(item.name for item in candidates[:12]))
-    manifest = {"partitions": {"train": [{}] * 60, "test": [{"name": f"TEST_{index:03d}"} for index in range(40)]}}
+    monkeypatch.setattr(
+        splits, "derive_training_candidates", lambda _manifest, _root: (candidates, "coverage")
+    )
+    monkeypatch.setattr(
+        splits,
+        "select_validation_sequences",
+        lambda _candidates, **_kwargs: tuple(item.name for item in candidates[:12]),
+    )
+    manifest = {
+        "partitions": {
+            "train": [{}] * 60,
+            "test": [{"name": f"TEST_{index:03d}"} for index in range(40)],
+        }
+    }
 
     split = build_split(manifest, tmp_path)
     sunny = split["audit"]["weather"]["sunny"]
@@ -66,13 +85,21 @@ def test_split_audit_reports_target_achieved_and_zero_joint_stratum(monkeypatch,
 
 
 def test_access_guard_rejects_tuning_official_test() -> None:
-    split = {"roles": {"development_train": [{"name": "TRAIN"}], "validation": [{"name": "VALID"}], "official_test": [{"name": "TEST"}]}}
+    split = {
+        "roles": {
+            "development_train": [{"name": "TRAIN"}],
+            "validation": [{"name": "VALID"}],
+            "official_test": [{"name": "TEST"}],
+        }
+    }
 
     with pytest.raises(SplitError, match="Tuning-mode"):
         validate_split_access(split, mode="tuning", role="official_test")
     with pytest.raises(SplitError, match="acknowledgement"):
         validate_split_access(split, mode="evaluation", role="official_test")
-    assert validate_split_access(split, mode="evaluation", role="official_test", allow_official_test=True) == ("TEST",)
+    assert validate_split_access(
+        split, mode="evaluation", role="official_test", allow_official_test=True
+    ) == ("TEST",)
 
 
 def test_frozen_split_refuses_different_existing_bytes(tmp_path: Path) -> None:
@@ -81,4 +108,8 @@ def test_frozen_split_refuses_different_existing_bytes(tmp_path: Path) -> None:
     assert write_split(split, output, dataset_root=tmp_path / "raw") == output.resolve()
     assert output.read_bytes() == split_json_bytes(split)
     with pytest.raises(SplitError, match="will not be overwritten"):
-        write_split({"roles": {"development_train": [{"name": "changed"}]}}, output, dataset_root=tmp_path / "raw")
+        write_split(
+            {"roles": {"development_train": [{"name": "changed"}]}},
+            output,
+            dataset_root=tmp_path / "raw",
+        )

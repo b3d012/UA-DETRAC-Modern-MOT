@@ -40,9 +40,9 @@ def _category(value: object) -> str:
 
 
 def _canonical(value: object) -> bytes:
-    return (json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False) + "\n").encode(
-        "utf-8"
-    )
+    return (
+        json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False) + "\n"
+    ).encode("utf-8")
 
 
 def _tie(seed: int, value: object) -> str:
@@ -69,7 +69,9 @@ def _quota_matrices(candidates: tuple[SequenceSplitCandidate, ...], validation_c
     camera = sorted({item.camera_state for item in candidates})
     cells = [(w, c) for w in weather for c in camera]
     capacities = {
-        cell: sum(item.sence_weather == cell[0] and item.camera_state == cell[1] for item in candidates)
+        cell: sum(
+            item.sence_weather == cell[0] and item.camera_state == cell[1] for item in candidates
+        )
         for cell in cells
     }
     weather_counts = {w: sum(capacities[w, c] for c in camera) for w in weather}
@@ -78,7 +80,12 @@ def _quota_matrices(candidates: tuple[SequenceSplitCandidate, ...], validation_c
     camera_target = _hamilton(camera_counts, validation_count)
     matrices: list[dict[tuple[str, str], int]] = []
 
-    def visit_exact(index: int, row_left: dict[str, int], column_left: dict[str, int], matrix: dict[tuple[str, str], int]) -> None:
+    def visit_exact(
+        index: int,
+        row_left: dict[str, int],
+        column_left: dict[str, int],
+        matrix: dict[tuple[str, str], int],
+    ) -> None:
         if index == len(cells):
             if not any(row_left.values()) and not any(column_left.values()):
                 matrices.append(matrix.copy())
@@ -136,7 +143,9 @@ def _choose_for_matrix(
 ) -> tuple[tuple[int, int, str], tuple[str, ...]]:
     groups = []
     for cell in cells:
-        members = tuple(item for item in candidates if (item.sence_weather, item.camera_state) == cell)
+        members = tuple(
+            item for item in candidates if (item.sence_weather, item.camera_state) == cell
+        )
         groups.append(_subsets(members, matrix[cell]))
     # Balance the Cartesian product before materializing the two halves.
     indexed = sorted(enumerate(groups), key=lambda item: len(item[1]), reverse=True)
@@ -201,7 +210,9 @@ def derive_training_candidates(manifest: dict[str, Any], dataset_root: str | Pat
     candidates = []
     coverage = []
     for entry in sorted(entries, key=lambda item: str(item["name"])):
-        sequence = parse_sequence(root / entry["annotation_file"], root / entry["image_directory"], "train")
+        sequence = parse_sequence(
+            root / entry["annotation_file"], root / entry["image_directory"], "train"
+        )
         if sequence.annotation_coverage.xml_frames_without_images:
             raise SplitError(f"XML-present frame lacks image: {sequence.name}")
         attributes = entry.get("sequence_attributes", {})
@@ -234,7 +245,9 @@ def _proportion(
     }
 
 
-def _exposure(source: list[SequenceSplitCandidate], validation: list[SequenceSplitCandidate], field: str):
+def _exposure(
+    source: list[SequenceSplitCandidate], validation: list[SequenceSplitCandidate], field: str
+):
     total = sum(getattr(item, field) for item in source)
     achieved = sum(getattr(item, field) for item in validation)
     proportion = achieved / total if total else 0.0
@@ -258,7 +271,9 @@ def _summary(items: list[SequenceSplitCandidate], field: str) -> dict[str, float
     }
 
 
-def build_split(manifest: dict[str, Any], dataset_root: str | Path, *, seed: int = 42) -> dict[str, Any]:
+def build_split(
+    manifest: dict[str, Any], dataset_root: str | Path, *, seed: int = 42
+) -> dict[str, Any]:
     candidates, coverage_fingerprint = derive_training_candidates(manifest, dataset_root)
     tests = manifest.get("partitions", {}).get("test")
     if len(candidates) != 60 or not isinstance(tests, list) or len(tests) != 40:
@@ -269,18 +284,42 @@ def build_split(manifest: dict[str, Any], dataset_root: str | Path, *, seed: int
     roles = {
         "development_train": [asdict(item) for item in development],
         "validation": [asdict(item) for item in validation],
-        "official_test": [{"name": str(item["name"])} for item in sorted(tests, key=lambda item: item["name"])],
+        "official_test": [
+            {"name": str(item["name"])} for item in sorted(tests, key=lambda item: item["name"])
+        ],
     }
     weather = sorted({item.sence_weather for item in candidates})
     camera = sorted({item.camera_state for item in candidates})
     audit = {
         "role_counts": {role: len(items) for role, items in roles.items()},
-        "intersections": {"development_validation": [], "development_official_test": [], "validation_official_test": []},
-        "weather": {key: _proportion(sum(item.sence_weather == key for item in candidates), sum(item.sence_weather == key for item in validation), len(candidates), len(validation)) for key in weather},
-        "camera_state": {key: _proportion(sum(item.camera_state == key for item in candidates), sum(item.camera_state == key for item in validation), len(candidates), len(validation)) for key in camera},
+        "intersections": {
+            "development_validation": [],
+            "development_official_test": [],
+            "validation_official_test": [],
+        },
+        "weather": {
+            key: _proportion(
+                sum(item.sence_weather == key for item in candidates),
+                sum(item.sence_weather == key for item in validation),
+                len(candidates),
+                len(validation),
+            )
+            for key in weather
+        },
+        "camera_state": {
+            key: _proportion(
+                sum(item.camera_state == key for item in candidates),
+                sum(item.camera_state == key for item in validation),
+                len(candidates),
+                len(validation),
+            )
+            for key in camera
+        },
         "joint_strata": {},
         "raw_image_frame_exposure": _exposure(list(candidates), validation, "frame_count"),
-        "annotated_frame_exposure": _exposure(list(candidates), validation, "annotated_frame_count"),
+        "annotated_frame_exposure": _exposure(
+            list(candidates), validation, "annotated_frame_count"
+        ),
         "frame_summaries": {
             "official_train": {
                 "raw_image_frames": _summary(list(candidates), "frame_count"),
@@ -294,7 +333,9 @@ def build_split(manifest: dict[str, Any], dataset_root: str | Path, *, seed: int
     }
     for w in weather:
         for c in camera:
-            source = [item for item in candidates if (item.sence_weather, item.camera_state) == (w, c)]
+            source = [
+                item for item in candidates if (item.sence_weather, item.camera_state) == (w, c)
+            ]
             if source:
                 selected = sum(item in validation for item in source)
                 data = _proportion(len(source), selected, len(candidates), len(validation))
@@ -314,7 +355,9 @@ def split_json_bytes(split: dict[str, Any]) -> bytes:
     return (json.dumps(split, indent=2, sort_keys=True, ensure_ascii=False) + "\n").encode("utf-8")
 
 
-def write_split(split: dict[str, Any], output_path: str | Path, *, dataset_root: str | Path) -> Path:
+def write_split(
+    split: dict[str, Any], output_path: str | Path, *, dataset_root: str | Path
+) -> Path:
     destination, raw_root = Path(output_path).resolve(), Path(dataset_root).resolve()
     if destination == raw_root or destination.is_relative_to(raw_root):
         raise SplitError(f"Split destination is inside raw dataset: {destination}")
@@ -324,7 +367,9 @@ def write_split(split: dict[str, Any], output_path: str | Path, *, dataset_root:
             return destination
         raise SplitError(f"Existing split differs and will not be overwritten: {destination}")
     destination.parent.mkdir(parents=True, exist_ok=True)
-    descriptor, temporary = tempfile.mkstemp(dir=destination.parent, prefix=f".{destination.name}.", suffix=".tmp")
+    descriptor, temporary = tempfile.mkstemp(
+        dir=destination.parent, prefix=f".{destination.name}.", suffix=".tmp"
+    )
     try:
         with os.fdopen(descriptor, "wb") as handle:
             handle.write(content)
@@ -335,16 +380,33 @@ def write_split(split: dict[str, Any], output_path: str | Path, *, dataset_root:
     return destination
 
 
-def validate_split_access(split: dict[str, Any], *, mode: str, role: str, sequences: Iterable[str] = (), allow_official_test: bool = False) -> tuple[str, ...]:
+def validate_split_access(
+    split: dict[str, Any],
+    *,
+    mode: str,
+    role: str,
+    sequences: Iterable[str] = (),
+    allow_official_test: bool = False,
+) -> tuple[str, ...]:
     roles = split.get("roles", {})
     if role not in {"development_train", "validation", "official_test"}:
         raise SplitError(f"Unknown split role: {role}")
-    memberships = {name: assigned for assigned, entries in roles.items() for name in (str(entry["name"]) for entry in entries)}
+    memberships = {
+        name: assigned
+        for assigned, entries in roles.items()
+        for name in (str(entry["name"]) for entry in entries)
+    }
     requested = tuple(sequences) or tuple(str(entry["name"]) for entry in roles.get(role, []))
-    if any(name not in memberships for name in requested) or any(memberships[name] != role for name in requested):
+    if any(name not in memberships for name in requested) or any(
+        memberships[name] != role for name in requested
+    ):
         raise SplitError("Requested sequences do not belong to the requested role")
-    if mode == "tuning" and (role == "official_test" or any(memberships[name] == "official_test" for name in requested)):
+    if mode == "tuning" and (
+        role == "official_test" or any(memberships[name] == "official_test" for name in requested)
+    ):
         raise SplitError("Tuning-mode access to official-test sequences is prohibited")
     if role == "official_test" and (mode != "evaluation" or not allow_official_test):
-        raise SplitError("Official-test access requires evaluation mode and explicit acknowledgement")
+        raise SplitError(
+            "Official-test access requires evaluation mode and explicit acknowledgement"
+        )
     return requested

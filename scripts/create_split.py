@@ -17,15 +17,25 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 def main(arguments: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, help="Raw UA-DETRAC root; otherwise UA_DETRAC_ROOT")
-    parser.add_argument("--manifest", type=Path, default=PROJECT_ROOT / "data/manifests/ua_detrac_manifest.json")
-    parser.add_argument("--output", type=Path, default=PROJECT_ROOT / "data/splits/ua_detrac_m3_split.json")
-    parser.add_argument("--config", type=Path, default=PROJECT_ROOT / "configs/dataset/ua_detrac.yaml")
+    parser.add_argument(
+        "--manifest", type=Path, default=PROJECT_ROOT / "data/manifests/ua_detrac_manifest.json"
+    )
+    parser.add_argument(
+        "--output", type=Path, default=PROJECT_ROOT / "data/splits/ua_detrac_m3_split.json"
+    )
+    parser.add_argument(
+        "--config", type=Path, default=PROJECT_ROOT / "configs/dataset/ua_detrac.yaml"
+    )
     args = parser.parse_args(arguments)
     try:
         config = load_dataset_config(args.config)
-        root = resolve_dataset_root(args.root, config.get("root"), env_var=config.get("root_env", "UA_DETRAC_ROOT"))
+        root = resolve_dataset_root(
+            args.root, config.get("root"), env_var=config.get("root_env", "UA_DETRAC_ROOT")
+        )
         manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
-        split = build_split(manifest, root, seed=int(config.get("split_policy", {}).get("seed", 42)))
+        split = build_split(
+            manifest, root, seed=int(config.get("split_policy", {}).get("seed", 42))
+        )
         output = write_split(split, args.output, dataset_root=root)
     except (OSError, ValueError, DatasetConfigError, DatasetLayoutError, SplitError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
