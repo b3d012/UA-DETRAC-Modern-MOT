@@ -1,0 +1,12 @@
+# Deliberately explicit local compatibility diagnostic context.  Set these paths
+# to immutable official toolkit inputs before use; this is not a benchmark config.
+arguments:
+  - REPLACE_TRACKER_NAME
+  - REPLACE_DETECTOR_NAME
+  - REPLACE_THRESHOLD_FILE
+  - REPLACE_DETECTOR_PR_FILE
+  - REPLACE_SEQUENCE_LIST
+  - "{tracking_results_root}"
+  - "{output_dir}"
+# Exact native output filename is toolkit-version/workflow dependent.
+official_result_file: "{output_dir}/REPLACE_WITH_OFFICIAL_PR_OUTPUT.txt"

@@ -25,6 +25,11 @@ dev = [
   "pytest-cov>=5.0",
   "ruff>=0.6",
 ]
+evaluation = [
+  "numpy==1.26.4",
+  "scipy==1.12.0",
+  "trackeval @ git+https://github.com/JonathonLuiten/TrackEval.git@12c8791b303e0a0b50f753af204249e622d0281a",
+]
 ml = [
   "torch>=2.2",
   "torchvision>=0.17",

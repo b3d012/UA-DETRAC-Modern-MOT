@@ -1,0 +1,7 @@
+evaluation:
+  schema_version: 1
+  backend: trackeval
+  metrics: [HOTA, CLEAR, Identity]
+  iou_threshold: 0.5
+  annotation_gap_policy: contiguous_annotated_segments_reset_identity
+  ignore_policy: ua_detrac_legacy_drop_tracks
